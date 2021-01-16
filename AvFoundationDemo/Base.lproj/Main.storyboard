@@ -11,32 +11,91 @@
         <!--Camera-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AvFoundationDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CameraViewController" customModule="AvFoundationDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="joh-eV-Kmm">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UaB-xb-F2n">
+                                        <rect key="frame" x="177" y="723" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="BA1-Fm-F8a"/>
+                                            <constraint firstAttribute="width" constant="60" id="DRP-5f-b0k"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="Capture"/>
+                                        <connections>
+                                            <action selector="onCaptureClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8MF-rU-j9d"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h87-sl-f4a">
+                                        <rect key="frame" x="284" y="583" width="100" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="yfm-jL-YTh"/>
+                                            <constraint firstAttribute="width" constant="100" id="zhI-QY-Bz2"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="UaB-xb-F2n" firstAttribute="centerX" secondItem="joh-eV-Kmm" secondAttribute="centerX" id="Er3-or-73u"/>
+                                    <constraint firstAttribute="bottom" secondItem="h87-sl-f4a" secondAttribute="bottom" constant="30" id="YJr-8E-a1o"/>
+                                    <constraint firstAttribute="bottom" secondItem="UaB-xb-F2n" secondAttribute="bottom" constant="30" id="a1C-5E-exD"/>
+                                    <constraint firstAttribute="trailing" secondItem="h87-sl-f4a" secondAttribute="trailing" constant="30" id="yFa-dy-zMH"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="joh-eV-Kmm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="49s-DO-U6s"/>
+                            <constraint firstItem="joh-eV-Kmm" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="VoE-77-85P"/>
+                            <constraint firstItem="joh-eV-Kmm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fY9-Dw-tHx"/>
+                            <constraint firstItem="joh-eV-Kmm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gER-NT-q7K"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Camera" image="Photo Camera Icon" selectedImage="Photo Camera Icon" id="rbe-Be-VD2">
                         <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="btnCapture" destination="UaB-xb-F2n" id="XqN-1w-3yz"/>
+                        <outlet property="capturePreview" destination="joh-eV-Kmm" id="68C-28-LEg"/>
+                        <outlet property="capturedImage" destination="h87-sl-f4a" id="z6S-WL-mYW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="332" y="143"/>
+            <point key="canvasLocation" x="428.98550724637687" y="186.83035714285714"/>
         </scene>
         <!--Video-->
         <scene sceneID="eCu-P3-fWL">
             <objects>
-                <viewController id="c5e-gz-ejO" sceneMemberID="viewController">
+                <viewController id="c5e-gz-ejO" customClass="VideoViewController" customModule="AvFoundationDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qdT-I3-civ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kgJ-CH-gze">
+                                <rect key="frame" x="0.0" y="256.5" width="414" height="300"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="zBD-um-mSh"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="N3R-tJ-LyF"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kgJ-CH-gze" firstAttribute="trailing" secondItem="N3R-tJ-LyF" secondAttribute="trailing" id="Gmm-R8-Sdd"/>
+                            <constraint firstItem="kgJ-CH-gze" firstAttribute="centerX" secondItem="qdT-I3-civ" secondAttribute="centerX" id="U6Z-2Z-Scy"/>
+                            <constraint firstItem="kgJ-CH-gze" firstAttribute="centerY" secondItem="qdT-I3-civ" secondAttribute="centerY" id="nXF-5x-S5g"/>
+                            <constraint firstItem="kgJ-CH-gze" firstAttribute="leading" secondItem="N3R-tJ-LyF" secondAttribute="leading" id="nyq-9S-cB8"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Video" image="Video Camera Icon" selectedImage="Video Camera Icon" id="j8c-Qs-U7h">
                         <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -46,28 +105,57 @@
                             <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="videoView" destination="kgJ-CH-gze" id="NOz-kT-ZSC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="brQ-TO-Bb6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-493" y="695"/>
+            <point key="canvasLocation" x="-494.20289855072468" y="677.67857142857144"/>
         </scene>
         <!--Audio-->
         <scene sceneID="Wqv-W1-WtN">
             <objects>
-                <viewController id="dyg-3P-LQ7" sceneMemberID="viewController">
+                <viewController id="dyg-3P-LQ7" customClass="AudioViewController" customModule="AvFoundationDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vGy-zy-agb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Summer_Days" translatesAutoresizingMaskIntoConstraints="NO" id="Vf9-vY-BOx">
+                                <rect key="frame" x="94.5" y="296" width="225" height="225"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zkQ-me-lJb">
+                                <rect key="frame" x="157" y="601" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="JEu-oj-bYe"/>
+                                    <constraint firstAttribute="height" constant="100" id="Kwy-hU-AYe"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="Play"/>
+                                <connections>
+                                    <action selector="onPlayClicked:" destination="dyg-3P-LQ7" eventType="touchUpInside" id="LJ5-dB-HtA"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="XMS-QP-tgE"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zkQ-me-lJb" firstAttribute="top" secondItem="Vf9-vY-BOx" secondAttribute="bottom" constant="80" id="7fS-44-p6F"/>
+                            <constraint firstItem="zkQ-me-lJb" firstAttribute="centerX" secondItem="vGy-zy-agb" secondAttribute="centerX" id="PLd-XJ-oOJ"/>
+                            <constraint firstItem="XMS-QP-tgE" firstAttribute="bottom" secondItem="zkQ-me-lJb" secondAttribute="bottom" constant="112" id="btc-2c-ouE"/>
+                            <constraint firstItem="zkQ-me-lJb" firstAttribute="centerX" secondItem="Vf9-vY-BOx" secondAttribute="centerX" id="ylv-bN-Ukt"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Audio" image="Music" selectedImage="Music" id="ISF-va-YVO">
                         <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="btnPlay" destination="zkQ-me-lJb" id="JL1-Gu-KXT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PZz-lX-3DW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-483" y="-38"/>
+            <point key="canvasLocation" x="-494.20289855072468" y="-127.23214285714285"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="eWZ-b1-SyO">
@@ -88,6 +176,7 @@
                     <connections>
                         <segue destination="dyg-3P-LQ7" kind="relationship" relationship="viewControllers" id="UEJ-CN-vlJ"/>
                         <segue destination="c5e-gz-ejO" kind="relationship" relationship="viewControllers" id="1hT-JO-Un4"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="fzr-EE-4JY"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YoZ-mT-FPC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -96,8 +185,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Capture" width="48" height="48"/>
         <image name="Music" width="36" height="36"/>
         <image name="Photo Camera Icon" width="24" height="24"/>
+        <image name="Play" width="96" height="96"/>
+        <image name="Summer_Days" width="225" height="225"/>
         <image name="Video Camera Icon" width="24" height="24"/>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

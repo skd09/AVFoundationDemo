@@ -14,6 +14,10 @@
 		2FE8455325B24EDA00B65B8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FE8455225B24EDA00B65B8B /* Assets.xcassets */; };
 		2FE8455625B24EDA00B65B8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FE8455425B24EDA00B65B8B /* LaunchScreen.storyboard */; };
 		2FE8456025B24F0E00B65B8B /* Summer Days.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FE8455F25B24F0E00B65B8B /* Summer Days.mp3 */; };
+		96FE1ED925B25EA700CD9F86 /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE1ED825B25EA700CD9F86 /* AudioViewController.swift */; };
+		96FE1EDC25B25EB400CD9F86 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE1EDB25B25EB400CD9F86 /* VideoViewController.swift */; };
+		96FE1EDF25B25ECB00CD9F86 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE1EDE25B25ECB00CD9F86 /* CameraViewController.swift */; };
+		96FE1EE325B2784600CD9F86 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE1EE225B2784600CD9F86 /* CameraController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		2FE8455525B24EDA00B65B8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2FE8455725B24EDA00B65B8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FE8455F25B24F0E00B65B8B /* Summer Days.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Summer Days.mp3"; sourceTree = "<group>"; };
+		96FE1ED825B25EA700CD9F86 /* AudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
+		96FE1EDB25B25EB400CD9F86 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		96FE1EDE25B25ECB00CD9F86 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		96FE1EE225B2784600CD9F86 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,8 @@
 		2FE8454825B24ED800B65B8B /* AvFoundationDemo */ = {
 			isa = PBXGroup;
 			children = (
+				96FE1EE125B2781100CD9F86 /* Utils */,
+				96FE1ED725B25E6A00CD9F86 /* ViewController */,
 				2FE8455E25B24EFF00B65B8B /* Sound */,
 				2FE8454925B24ED800B65B8B /* AppDelegate.swift */,
 				2FE8454B25B24ED800B65B8B /* SceneDelegate.swift */,
@@ -76,6 +86,24 @@
 				2FE8455F25B24F0E00B65B8B /* Summer Days.mp3 */,
 			);
 			path = Sound;
+			sourceTree = "<group>";
+		};
+		96FE1ED725B25E6A00CD9F86 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				96FE1ED825B25EA700CD9F86 /* AudioViewController.swift */,
+				96FE1EDB25B25EB400CD9F86 /* VideoViewController.swift */,
+				96FE1EDE25B25ECB00CD9F86 /* CameraViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		96FE1EE125B2781100CD9F86 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				96FE1EE225B2784600CD9F86 /* CameraController.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,8 +178,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FE8454E25B24ED800B65B8B /* ViewController.swift in Sources */,
+				96FE1ED925B25EA700CD9F86 /* AudioViewController.swift in Sources */,
+				96FE1EE325B2784600CD9F86 /* CameraController.swift in Sources */,
 				2FE8454A25B24ED800B65B8B /* AppDelegate.swift in Sources */,
+				96FE1EDC25B25EB400CD9F86 /* VideoViewController.swift in Sources */,
 				2FE8454C25B24ED800B65B8B /* SceneDelegate.swift in Sources */,
+				96FE1EDF25B25ECB00CD9F86 /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
